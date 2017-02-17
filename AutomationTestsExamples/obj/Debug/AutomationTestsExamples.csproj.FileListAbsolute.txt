@@ -1,0 +1,12 @@
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\obj\Debug\AutomationTestsExamples.csprojResolveAssemblyReference.cache
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\bin\Debug\AutomationTestsExamples.dll
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\bin\Debug\AutomationTestsExamples.pdb
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\bin\Debug\nunit.framework.dll
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\bin\Debug\WebDriver.dll
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\bin\Debug\WebDriver.Support.dll
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\bin\Debug\nunit.framework.xml
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\bin\Debug\WebDriver.xml
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\bin\Debug\WebDriver.Support.xml
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\obj\Debug\AutomationTestsExamples.dll
+C:\Zymantas\Project\expense-qa\AutomationTestsExamples\AutomationTestsExamples\obj\Debug\AutomationTestsExamples.pdb
