@@ -34,6 +34,7 @@ namespace AutomationTestsExamples
             _testPage.assert(searchKeyword);
             _testPage.hoveronaccount();
             _testPage.ClickItem();
+            Assert.IsTrue(_testPage.GetTitle().Contains("Copyright © 2013, FriendSys, performed by Visma Lietuva - students"), "Don't login");
         }
 
         [TestCleanup]
