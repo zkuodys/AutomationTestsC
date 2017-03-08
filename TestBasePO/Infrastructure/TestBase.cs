@@ -1,24 +1,29 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 
 namespace ExpenseFunctionalTests.Infrastructure
 {
-    [TestClass]
+    [TestFixture]
     public abstract class TestBase
     {
         protected static IWebDriver Driver { get; set; }
 
-        [TestInitialize]
+        [SetUp]
         public void Setup()
         {
-            Driver = new FirefoxDriver();
-            Driver.Navigate().GoToUrl("http://www.google.lt");
 
-            BeforeTest();
+            //BeforeTest();
+            //Driver = new FirefoxDriver();
+            Driver = new ChromeDriver();
+
+            Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+            Driver.Navigate().GoToUrl("http://lt-practice.vsw.datakraftverk.no/Web/#!/login");
         }
 
-        [TestCleanup]
+        [TearDown]
         public void Teardown()
         {
             AfterTest();
