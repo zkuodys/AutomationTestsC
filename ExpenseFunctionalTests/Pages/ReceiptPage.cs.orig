@@ -1,0 +1,92 @@
+﻿using System;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Support;
+using OpenQA.Selenium.Interactions;
+using NUnit.Framework;
+
+namespace ExpenseFunctionalTests
+{
+    public class ReceiptPage
+    {
+        private IWebDriver _driver;
+        public string receiptName;
+
+        public ReceiptPage(IWebDriver driver)
+        {
+            PageFactory.InitElements(driver, this);
+            _driver = driver;
+        }
+
+        //ReceiptPage selectors
+        [FindsBy(How = How.CssSelector, Using = "div:nth-child(1) > div > div:nth-child(3) > button:nth-child(1)")]
+        protected IWebElement CreateNewExpenseButton { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "div:nth-child(1) > div > div:nth-child(3) > button:nth-child(2)")]
+        protected IWebElement ViewReceiptButton { get; set; }
+
+<<<<<<< HEAD
+        [FindsBy(How = How.CssSelector, Using = "div:nth-child(1) > div > div:nth-child(3) > button:nth-child(3)")]
+=======
+        [FindsBy(How = How.TagName, Using = "exp-common-list")]
+        protected IWebElement Grid { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "")]
+>>>>>>> Database utils
+        protected IWebElement DeleteReceiptButton { get; set; }
+
+        [FindsBy(How = How.CssSelector ,Using = "div:nth-child(1) > div > div:nth-child(1)")]
+        protected IWebElement ReceiptName { get; set; }        
+        //ReceiptPage selectors
+
+        //ReceiptPage methods
+        //stores receipt name value in "receiptName" for future use.
+        public string StoreReceiptName()
+        {
+            receiptName = ReceiptName.Text;
+            return receiptName;
+        }
+        
+        public ReceiptPage ClickCreateNewExpense()
+        {
+            CreateNewExpenseButton.Click();
+            return this;
+        }
+
+        public ReceiptPage ClickViewReceipt()
+        {
+            ViewReceiptButton.Click();
+            return this;
+        }
+
+        public ReceiptPage ClickDeleteReceipt()
+        {
+            DeleteReceiptButton.Click();
+            return this;
+        }
+
+<<<<<<< HEAD
+        public void VerifyIfRowExists(string receiptNname)
+        {
+            bool found = false;
+            var GridContainer = _driver.FindElement(By.TagName("exp-common-list"));
+            var GridRows = GridContainer.FindElements(By.ClassName("items"));
+            foreach (var gridRow in GridRows)
+            {
+                var firstColumn = gridRow.FindElement(By.TagName("div"));
+                if (firstColumn.Text.Contains(receiptNname))
+                {
+                    found = true;
+                    break;
+                }
+            }
+            Assert.IsTrue(found, "Could not find!");
+=======
+        public IWebElement GetGrid()
+        {
+            return Grid;
+>>>>>>> Database utils
+        }
+        //ReceiptPage methods
+    }
+}
